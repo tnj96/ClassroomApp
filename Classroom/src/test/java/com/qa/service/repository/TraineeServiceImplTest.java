@@ -47,25 +47,33 @@ public class TraineeServiceImplTest
 		Mockito.verify(repo).createTrainee(MOCK_OBJECT2);	
 	}
 	
-//	@Test 
-//	public void getAllTrainees() {
-//		Mockito.verify(repo).getAllTrainees();
-//	}
-//
+	@Test 
+	public void getAllTrainees() {
+		Mockito.when(service.getAllTrainees()).thenReturn(MOCK_DATA_ARRAY2);
+		assertEquals(MOCK_DATA_ARRAY2, service.getAllTrainees());
+		Mockito.verify(repo).getAllTrainees();
+	}
+
 //	public void getATrainee(int traineeId) {
 //		Mockito.verify(repo).getATrainee();
-//	}
-//
-//	public void updateTrainee() {
-//		Mockito.verify(repo).updateTrainee();
-//	}
-//
-//	public void deleteTrainee() {
-//		Mockito.verify(repo).deleteTrainee();
-//	}
-//
-//	public void cycleTrainees() {
-//		Mockito.verify(repo).cycleTrainees();
-//	}
+//	} 
+
+	public void updateTrainee() {
+		Mockito.when(service.updateTrainee(MOCK_DATA_ARRAY2, 1));
+		assertEquals(MOCK_DATA_ARRAY2, service.updateTrainee(MOCK_DATA_ARRAY2, 1));
+		Mockito.verify(repo).updateTrainee(MOCK_DATA_ARRAY2, 1);
+	} 
+
+	public void deleteTrainee() {
+		Mockito.when(service.deleteTrainee(1)).thenReturn(MOCK_DATA_ARRAY2);
+		assertEquals(MOCK_DATA_ARRAY2, service.deleteTrainee(1));
+		Mockito.verify(repo).deleteTrainee(1);
+	}
+
+	public void cycleTrainees() {
+		Mockito.when(service.cycleTrainees(MOCK_DATA_ARRAY2)).thenReturn(1);
+		assertEquals(1, service.cycleTrainees(MOCK_DATA_ARRAY2));
+		Mockito.verify(repo).cycleTrainees(MOCK_DATA_ARRAY2);
+	}
 
 }
