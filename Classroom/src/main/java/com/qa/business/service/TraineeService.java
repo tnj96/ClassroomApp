@@ -6,7 +6,7 @@ public interface TraineeService {
 	
 	String getAllTrainees();
 	
-	String getATrainer(int traineeId);
+	String getATrainee(int traineeId);
 	
 	String updateTrainee(String traineeName, int traineeId);
 	

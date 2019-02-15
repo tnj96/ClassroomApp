@@ -1,41 +1,54 @@
 package com.qa.business.service;
 
+import javax.inject.Inject;
+
+import com.qa.persistence.repository.TraineeRepository;
+import com.qa.util.JSONUtil;
+
 public class TraineeServiceImpl implements TraineeService{
 
+	@Inject
+	TraineeRepository repo;
+	
+	@Inject 
+	JSONUtil util;
+	
 	@Override
 	public String createTrainee(String traineeName) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.createTrainee(traineeName);
 	}
 
 	@Override
 	public String getAllTrainees() {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.getAllTrainees();
 	}
 
 	@Override
-	public String getATrainer(int traineeId) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getATrainee(int traineeId) {
+		return repo.getATrainee(traineeId);
 	}
 
 	@Override
 	public String updateTrainee(String traineeName, int traineeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.updateTrainee(traineeName, traineeId);
 	}
 
 	@Override
 	public String deleteTrainee(int traineeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.deleteTrainee(traineeId);
 	}
 
 	@Override
 	public int cycleTrainees(String traineeName) {
-		// TODO Auto-generated method stub
-		return 0;
+		return repo.cycleTrainees(traineeName);
+	}
+
+	public void setRepo(TraineeRepository repo) {
+		this.repo = repo;
+	}
+
+	public void setUtil(JSONUtil util) {
+		this.util = util;
 	}
 
 }

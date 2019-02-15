@@ -40,7 +40,7 @@ public class TraineeDBRepository implements TraineeRepository{
 	}
 
 	@Override
-	public String getATrainer(int traineeId) {
+	public String getATrainee(int traineeId) {
 		return util.getJSONForObject(manager.find(Trainee.class, traineeId)); 
 	}
 

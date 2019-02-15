@@ -30,8 +30,8 @@ public class Classroom {
 
 	public Classroom(String trainerName, Collection<Trainee> trainees) {
 		this.trainerName = trainerName;
-		this.trainees = trainees;
-	}
+		this.trainees = trainees; 
+	} 
 
 	public int getClassroomId() {
 		return classroomId;
