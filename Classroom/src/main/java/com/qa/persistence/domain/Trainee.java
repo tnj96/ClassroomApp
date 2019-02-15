@@ -6,8 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
-@Entity
+@Entity(name = "Trainee")
+@Table(name = "trainee")
 public class Trainee {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +27,6 @@ public class Trainee {
 	}
 
 	public Trainee(String traineeName, Classroom classroom) {
-		super();
 		this.traineeName = traineeName;
 		this.classroom = classroom;
 	}
