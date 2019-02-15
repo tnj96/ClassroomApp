@@ -1,0 +1,4 @@
+com\qa\test\suite\TestRunner.class
+com\qa\test\suite\TestSuite.class
+com\qa\service\repository\TraineeServiceImplTest.class
+com\qa\service\repository\TraineeDBRepositoryTest.class

@@ -1,0 +1,16 @@
+<html>
+
+<head>
+	<script>
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "api/movie/getAllMovies");
+        xhr.onload = () => {
+            document.write(xhr.responseText);
+        }
+        xhr.send();
+    </script>
+<head>
+
+<body></body>
+
+</html>
