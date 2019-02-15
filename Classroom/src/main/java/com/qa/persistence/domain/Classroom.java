@@ -24,7 +24,7 @@ public class Classroom {
 	@JoinColumn(name = "classromId")
 	private Collection<Trainee> trainees;
 
-	public Classroom() {
+	public Classroom() { 
 	
 	}
 

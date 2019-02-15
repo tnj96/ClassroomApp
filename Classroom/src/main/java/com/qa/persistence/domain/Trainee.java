@@ -12,24 +12,25 @@ import javax.persistence.Table;
 @Table(name = "trainee")
 public class Trainee {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int traineeId;
 	
 	private String traineeName;
 
 	@ManyToOne
-	@JoinColumn(name="classroomId")
-	private Classroom classroom;
+	@JoinColumn(name="classroomId") 
+	private Classroom classroomid;
 	
 	public Trainee() {
 		
 	}
 
-	public Trainee(String traineeName, Classroom classroom) {
+	public Trainee(String traineeName) {
 		this.traineeName = traineeName;
-		this.classroom = classroom;
-	}
+//		this.classroomid = classroom;
+	} 
 
 	public int getTraineeId() {
 		return traineeId;
@@ -48,11 +49,11 @@ public class Trainee {
 	}
 
 	public Classroom getClassroom() {
-		return classroom;
+		return classroomid;
 	}
 
-	public void setClassroom(Classroom classroom) {
-		this.classroom = classroom;
+	public void setClassroomId(Classroom classroom) {
+		this.classroomid = classroom;
 	}
 	
 }
