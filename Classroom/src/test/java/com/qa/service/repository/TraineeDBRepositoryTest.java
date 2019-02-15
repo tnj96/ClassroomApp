@@ -21,7 +21,7 @@ import com.qa.persistence.repository.TraineeDBRepository;
 import com.qa.util.JSONUtil;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TraineeDBReposityTest {
+public class TraineeDBRepositoryTest {
 	
 	@InjectMocks
 	private TraineeDBRepository repo;
